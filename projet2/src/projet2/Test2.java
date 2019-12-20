@@ -8,9 +8,63 @@ public class Test2 {
 		// tpInfo();
 		// tpAge();
 		// menu();
-		tpBoucle();
+		//tpBoucle();
+		tpBoucle2();
+		//tpBouclev3();
 	}
+	static void tpBouclev3() {
+			// avec un string builder pour optimiser les performances
+		StringBuilder sb = new StringBuilder();
+		// L'utilisateur renseigne les données
+		Scanner clavierst = new Scanner(System.in);
+		Scanner clavierint = new Scanner(System.in);
+		System.out.println("Donner un caractère:");
+		String car = clavierst.nextLine();
 
+		System.out.println("Donner la hauteur:");
+		int hauteur = clavierint.nextInt();
+
+		System.out.println("Donner la largeur:");
+		int largeur = clavierint.nextInt();
+
+		for (int j = 0; j < hauteur; j++) {
+			for (int i = 0; i < largeur; i++)
+				sb.append(car + "\t");
+			sb.append("\n");
+
+		}
+		String resultat = sb.toString();
+
+		System.out.println(resultat);
+	}
+	static void tpBoucle2() {
+		// for caractere
+		System.out.println("caractere=?");
+		Scanner clavier = new Scanner(System.in);
+		String caractere = clavier.nextLine();
+
+		// for hauteur
+		System.out.println("hauteur=?");
+		Scanner clavier1 = new Scanner(System.in);
+		int hauteur = clavier1.nextInt();
+
+		// for longueur
+		System.out.println("longueur=?");
+		Scanner clavier2 = new Scanner(System.in);
+		int longueur = clavier2.nextInt();
+		
+		String resultat="";
+		
+		for (int h = 0; h < hauteur; h++) {
+			for (int l = 0; l < longueur; l++) {
+				resultat +=caractere+"\t";
+			}
+			resultat+="\n";
+		}
+		
+		System.out.println(resultat);
+
+	}
 	static void tpBoucle() {
 		// for caractere
 		System.out.println("caractere=?");
@@ -29,7 +83,7 @@ public class Test2 {
 
 		for (int h = 0; h < hauteur; h++) {
 			for (int l = 0; l < longueur; l++) {
-				System.out.print(caractere);
+				System.out.print(caractere+"\t");
 			}
 			System.out.print("\n");
 		}
