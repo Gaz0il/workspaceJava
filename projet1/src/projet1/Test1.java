@@ -3,10 +3,32 @@ import java.util.Scanner;
 public class Test1 {
 
 	public static void main(String[] args) {
-		testEgalitestring();
+		//testEgalitestring();
 		//m2();
+		//m10();
+		testSwitch();
 		
 
+	}
+	static void testSwitch(){
+		System.out.print("Donner un nombre:");
+		Scanner clavier=new Scanner(System.in);
+		int nb=clavier.nextInt();
+		switch(nb){
+		case 1 : System.out.println("Lundi");break;
+		case 2 : System.out.println("Mardi");break;
+		case 3 : System.out.println("Mercredi");break;
+		default :System.out.println("Autrement");break;
+		}
+	}
+	static void m10(){
+		// condition ternaire
+		Scanner clavier = new Scanner(System.in);
+		System.out.println("age??");
+		int age=clavier.nextInt();
+		String reponse;
+		reponse=(age<18)? "mineur" : "majeur";
+		System.out.println(reponse);
 	}
 	static void testEgalitestring(){
 		String s1="toto";
