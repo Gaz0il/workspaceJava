@@ -9,9 +9,25 @@ public class Test2 {
 		// tpAge();
 		// menu();
 		//tpBoucle();
-		tpBoucle2();
+		//tpBoucle2();
 		//tpBouclev3();
+		tpPuissance();
 	}
+	
+	static void tpPuissance(){
+		
+		Scanner clavier=new Scanner(System.in);
+		System.out.println("saisir nombre");
+		double nombre=clavier.nextDouble();
+		System.out.println("saisir puissance");
+		double puissance=clavier.nextDouble();
+		
+		double res=Math.pow(nombre, puissance);
+		System.out.println(nombre+"puissance"+puissance+"="+res);
+				
+		
+	}
+	
 	static void tpBouclev3() {
 			// avec un string builder pour optimiser les performances
 		StringBuilder sb = new StringBuilder();
