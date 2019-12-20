@@ -6,9 +6,13 @@ public class Test1 {
 		//testEgalitestring();
 		//m2();
 		//m10();
-		testSwitch();
-		
+		//testSwitch();
+		testFor();
 
+	}
+	static void testFor(){
+		for (int i = 0; i<10;i++)
+			System.out.println("I="+i);
 	}
 	static void testSwitch(){
 		System.out.print("Donner un nombre:");

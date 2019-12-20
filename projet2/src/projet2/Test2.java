@@ -6,7 +6,22 @@ public class Test2 {
 
 	public static void main(String[] args) {
 		//tpInfo();
-		tpAge();
+		//tpAge();
+		menu();
+	}
+	static void menu(){
+		System.out.println("tpAge:1 tpInfo:2 \t saisir chiffre:");
+		Scanner clavier=new Scanner(System.in);
+		int nb=clavier.nextInt();
+		switch(nb){
+		case 1 : tpAge();
+		break;
+		case 2 : tpInfo();
+		break;
+		default:
+			System.out.println("error");
+		
+		}
 	}
 	static void tpInfo(){
 		System.out.println("prenom ?");
