@@ -5,40 +5,70 @@ import java.util.Scanner;
 public class Test2 {
 
 	public static void main(String[] args) {
-		//tpInfo();
-		//tpAge();
-		menu();
+		// tpInfo();
+		// tpAge();
+		// menu();
+		tpBoucle();
 	}
-	static void menu(){
+
+	static void tpBoucle() {
+		// for caractere
+		System.out.println("caractere=?");
+		Scanner clavier = new Scanner(System.in);
+		String caractere = clavier.nextLine();
+
+		// for hauteur
+		System.out.println("hauteur=?");
+		Scanner clavier1 = new Scanner(System.in);
+		int hauteur = clavier1.nextInt();
+
+		// for longueur
+		System.out.println("longueur=?");
+		Scanner clavier2 = new Scanner(System.in);
+		int longueur = clavier2.nextInt();
+
+		for (int h = 0; h < hauteur; h++) {
+			for (int l = 0; l < longueur; l++) {
+				System.out.print(caractere);
+			}
+			System.out.print("\n");
+		}
+
+	}
+
+	static void menu() {
 		System.out.println("tpAge:1 tpInfo:2 \t saisir chiffre:");
-		Scanner clavier=new Scanner(System.in);
-		int nb=clavier.nextInt();
-		switch(nb){
-		case 1 : tpAge();
-		break;
-		case 2 : tpInfo();
-		break;
+		Scanner clavier = new Scanner(System.in);
+		int nb = clavier.nextInt();
+		switch (nb) {
+		case 1:
+			tpAge();
+			break;
+		case 2:
+			tpInfo();
+			break;
 		default:
 			System.out.println("error");
-		
+
 		}
 	}
-	static void tpInfo(){
+
+	static void tpInfo() {
 		System.out.println("prenom ?");
-		Scanner clavier=new Scanner(System.in);
-		Scanner clavier2=new Scanner (System.in);
-		String prenom=clavier.nextLine();
-		
+		Scanner clavier = new Scanner(System.in);
+		Scanner clavier2 = new Scanner(System.in);
+		String prenom = clavier.nextLine();
+
 		System.out.println("nom ?");
-		String nom=clavier.nextLine();
-		
-		
+		String nom = clavier.nextLine();
+
 		System.out.println("age ?");
-		int age=clavier2.nextInt();
-		
-		String s=prenom+" "+nom+" "+age+" ans";
+		int age = clavier2.nextInt();
+
+		String s = prenom + " " + nom + " " + age + " ans";
 		System.out.println(s);
 	}
+
 	static void tpAge() {
 		Scanner clavier = new Scanner(System.in);
 		Scanner clavier2 = new Scanner(System.in);
@@ -47,16 +77,16 @@ public class Test2 {
 		String nom = clavier2.nextLine();
 		System.out.println("Quel est votre age?");
 		int age = clavier.nextInt();
-		
-		final int ageMin=0;
-		final int ageMax=120;
-		final int ageMineur=18;
-		final int ageMajeur=50;
+
+		final int ageMin = 0;
+		final int ageMax = 120;
+		final int ageMineur = 18;
+		final int ageMajeur = 50;
 
 		String status = nom + "\t" + age;
 		if ((age >= ageMin) && (age < ageMineur))
 			status += " Vous êtes mineur !";
-		else if ((age >= ageMineur) && (age <ageMajeur))
+		else if ((age >= ageMineur) && (age < ageMajeur))
 			status += " Vous êtes majeur !";
 		else if ((age >= ageMajeur) && (age <= ageMax))
 			status += " Vous êtes senior !";
