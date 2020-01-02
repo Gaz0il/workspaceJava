@@ -14,9 +14,142 @@ public class Test2 {
 		//tpPuissance();
 		//tpWhile();
 		//tpRandom();
-		tpCalculsalaire();
-	}
+		//tpCalculsalaire();
+		//tpCalcul();
+		//tpTableau();
+		//tpTableaujacky();
+		tpDoublerTableau();
 		
+		
+	}
+	
+	
+	static void tpDoublerTableau(){
+		int [] tab1={10,20,30,40,50};
+		int [] tab2=doublertableau(tab1);
+		for (int e: tab1)
+			System.out.print(e+"\t");
+		System.out.println();
+		for (int e: tab2)
+			System.out.print(e+"\t");
+	}
+	
+	static int[] doublertableau(int[] x){
+		int[] res=new int [x.length];
+		for (int i=0; i<x.length;i++)
+			res[i]=x[i]*2;
+		return res;
+		};
+		
+	
+	
+		
+	static void tpTableaujacky() {
+		Scanner clavier = new Scanner(System.in);
+		System.out.print("Veuillez saisir la taille du tableau (de chaine) souhaitée: ");
+		int taille = clavier.nextInt();
+
+		String[] Tab = new String[taille];
+
+		Scanner clavierStr = new Scanner(System.in);
+		for (int i = 0; i < Tab.length; i++) {
+			System.out.print("Veuillez saisir l'élément n°" + (i + 1) + " du tableau:");
+
+			Tab[i] = clavierStr.nextLine();
+
+		}
+
+		System.out.println("Voici un affichage du tableau demandé:");
+		for (String e: Tab)
+			System.out.println(e);
+		 //for (int i = 0; i <Tab.length; i++)
+		 //System.out.println("element " + (i +1)+ " : " + Tab[i]);
+
+
+	}
+	
+	static void tpTableau(){
+		Scanner clavier = new Scanner(System.in);
+		System.out.println("veuillez saisir la taile du tableau:");
+		int taille=clavier.nextInt();
+		int [] tab=new int[taille];
+		for (int i=0;i<tab.length;i++){
+			Random r=new Random();
+		int nbre=r.nextInt(100);
+		tab[i]=nbre;
+		System.out.print(tab[i]+"\t");
+	}
+	}
+	
+	
+	static void tpCalcul(){
+		//utilisateur
+		
+		//saisir les 2 operants et l'operateur
+		Scanner clavier1 = new Scanner(System.in);
+		System.out.println("saisir le premier nombre");
+		double nb1=clavier1.nextDouble();
+		System.out.println("saisir le deuxieme");
+		double nb2=clavier1.nextDouble();
+		Scanner clavier2 = new Scanner(System.in);
+		System.out.println(
+				"Veuillez choisir  dans la liste suivante l'opérateur voulu:\n +/add\t -/sous\t */mult\t / div");
+		String operateur = clavier2.nextLine();
+		double resultat=calcul(nb1, nb2, operateur);
+		String str="le résultat de l'opération : " + nb1 + " " + operateur + "" + nb2 + " = " + resultat;
+		System.out.println(str);
+		resultat=calcul(nb1,nb2,operateur);
+		//afficher le resultat
+		
+		
+	}
+	static double calcul (double nb1, double nb2,String operateur){
+		
+		//appel des methodes add/div/sous/mult en fonction de l'operateur
+		double res=0;
+		//switch case
+		switch (operateur){
+	case "+":
+		res=add(nb1,nb2);
+		break;
+	case "-":
+		res=sous(nb1,nb2);
+		break;
+	case "*":
+		res=mult(nb1,nb2);
+		break;
+	case "/":
+		res=div(nb1,nb2);
+		break;
+	default:
+		System.out.println("error");
+	
+		}
+		return res;
+		
+	}
+	
+	static double add(double nb1,double nb2){
+		double res;
+		res=nb1+nb2;
+		return res;
+	}
+	static double sous(double nb1,double nb2){
+		double res;
+		res=nb1-nb2;
+		return res;
+	}
+	static double mult(double nb1,double nb2){
+		double res;
+		res=nb1*nb2;
+		return res;
+	}
+	static double div(double nb1,double nb2){
+		double res;
+		res=nb1/nb2;
+		return res;
+	}
+	
 		static void tpCalculsalaire(){
 			Scanner clavier1 = new Scanner(System.in);
 			System.out.println("Votre nom:");

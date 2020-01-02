@@ -12,7 +12,8 @@ public class Test1 {
 		//While();
 		//testadd();
 		testaffiche();
-			}
+		//testaffichetableau();
+	}
 	static void testaffiche(){
 		affiche();
 		affiche("Hassin","jean-marc");
