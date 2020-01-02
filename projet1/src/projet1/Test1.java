@@ -7,9 +7,31 @@ public class Test1 {
 		//m2();
 		//m10();
 		//testSwitch();
-		testFor();
+		//testFor();
+		//testWhile();
+		doWhile();
+	}
+	
+	static void doWhile(){
+		int s=0;int i=0;
+		do{
+		s+=i;
+		i++;
+		}while(i<10);
+		System.out.println("Somme="+s);
+	} //difference avec while, meme si i>10 il ya aura au moins une boucle
+	
+	
+	static void testWhile(){
+		int s=0;int i=0;
+		while(i<10){
+		s+=i;
+		i++;
+		}
+		System.out.println("Somme="+s);
 
 	}
+	
 	static void testFor(){
 		for (int i = 0; i<10;i++)
 			System.out.println("I="+i);
