@@ -1,6 +1,6 @@
 package projet2;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Test2 {
 
@@ -11,9 +11,34 @@ public class Test2 {
 		//tpBoucle();
 		//tpBoucle2();
 		//tpBouclev3();
-		tpPuissance();
+		//tpPuissance();
+		//tpWhile();
+		tpRandom();
+		
 	}
+	static void tpRandom(){
+		Random r=new Random();
+		int res=r.nextInt(10);
+		System.out.println(res);
+		int t=0; int s=0;
+		while (res!=s){t++;
+		Scanner clavier=new Scanner(System.in);
+		System.out.println("saisir nombre");
+		s =clavier.nextInt();
+		if (t<=4 && res<s) System.out.println("--");
+		else if (t<=4 && res>s)System.out.println("++");
+		else if (t==5)break;
+		}
+		if (t==5)System.out.println("Game Over");
+		else System.out.println("trouvé en "+t+" coup(s)");
+		
+	};
 	
+	static void tpWhile(){
+		Random r=new Random();
+		int res=r.nextInt(10);
+		System.out.println(res);
+	}
 	static void tpPuissance(){
 		
 		Scanner clavier=new Scanner(System.in);
