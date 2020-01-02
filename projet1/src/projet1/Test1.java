@@ -9,9 +9,35 @@ public class Test1 {
 		//testSwitch();
 		//testFor();
 		//testWhile();
-		doWhile();
+		//While();
+		//testadd();
+		testaffiche();
+			}
+	static void testaffiche(){
+		affiche();
+		affiche("Hassin","jean-marc");
 	}
-	
+	static void affiche (){
+		System.out.println("hello");
+	}
+	static void affiche (String nom){
+		System.out.println("hello"+nom);
+		
+	}
+	static void affiche (String nom,String prenom){
+		System.out.println("hello "+prenom+" "+nom);
+		
+	}
+	static void testadd(){
+		int resultat= add(10,15);
+		System.out.println("resultat"+resultat);
+	}
+		static int add(int a,int b){
+			int res=a+b;
+			return res;
+		}
+		
+		
 	static void doWhile(){
 		int s=0;int i=0;
 		do{

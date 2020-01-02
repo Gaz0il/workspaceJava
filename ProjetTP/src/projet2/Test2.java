@@ -13,9 +13,28 @@ public class Test2 {
 		//tpBouclev3();
 		//tpPuissance();
 		//tpWhile();
-		tpRandom();
-		
+		//tpRandom();
+		tpCalculsalaire();
 	}
+		
+		static void tpCalculsalaire(){
+			Scanner clavier1 = new Scanner(System.in);
+			System.out.println("Votre nom:");
+			String nom=clavier1.next();
+			Scanner clavier2 = new Scanner(System.in);
+			System.out.println("Votre salaire annuel brut: ");
+			double salaire=clavier2.nextDouble();
+			Calculsalaire (nom,salaire);
+			
+		}
+			
+		
+		static void Calculsalaire ( String nom,double salaire){
+			String resultat="NOM: " + nom.toUpperCase()+"\t";
+			resultat += "salaire mensuel net: " + (salaire-salaire*0.23)/12+" €";
+			System.out.println(resultat);
+		}
+		
 	static void tpRandom(){
 		Random r=new Random();
 		int res=r.nextInt(10);
