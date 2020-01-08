@@ -22,4 +22,18 @@ public class PersonneV7 {
 		return "PersonneV4 [nom=" + nom + ", prenom=" + prenom + ", age=" + age + "]";
 	}
 
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * @return the nom
+	 */
+	public String getNom() {
+		return nom;
+	}
+
 }

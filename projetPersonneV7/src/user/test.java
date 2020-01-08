@@ -17,7 +17,11 @@ public class test {
 		g.ajouter(p1);
 		g.ajouter(p2);
 		boolean b=g.ajouter(p3);
-
+		System.out.println(g);
+		System.out.println(g.getCount("dupond"));
+		g.sup(p1);
+		System.out.println(g.getCount());
+		System.out.println(g.getCount("dupond"));
 		System.out.println(g);
 		
 		//tp ID différent

@@ -25,6 +25,20 @@ public boolean ajouter(PersonneV7 p) {
 	return res;
 }
 
+public boolean sup(PersonneV7 p) {
+	boolean res = false;
+	for (int i = 0; i < tab.length; i++)
+
+		if (tab[i] != null && tab[i].getId()==p.getId()) {
+			tab[i] = null;
+			res = true;
+			break;
+		}
+
+	return res;
+}
+
+
 public String toString() {
 	String reponse = "Groupe [nom=" + nom;
 	for (PersonneV7 p : tab)
@@ -33,9 +47,23 @@ public String toString() {
 	return reponse;
 }
 
-public boolean retirer (int id){
-	return false;
-}
 
+public int getCount(){
+int count=0;
+for (PersonneV7  p: tab) {
+	if (p!=null){count++;
+	};
+}
+return count;
+
+}	
+public int getCount(String nom){
+int count=0;
+for (PersonneV7  p: tab) {
+	if (p!=null && nom.equalsIgnoreCase(p.getNom())){count++;
+	};
+}	
+return count;
+}
 }
 
