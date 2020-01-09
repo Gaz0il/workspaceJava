@@ -9,9 +9,7 @@ public class test {
 	}
 
 	static void test1() {
-		Personne p1 = new Personne();
-		Personne p2 = new Personne();
-		System.out.println(p1);
+		Personne p1 = Personne.getInstance();
 		System.out.println(p1);
 
 	}

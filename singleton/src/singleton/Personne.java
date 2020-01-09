@@ -1,15 +1,22 @@
 package singleton;
 
-public class Personne {
+public final class Personne {
 
-	static void Personne() {
+	private static Personne instance;
 
+	/**
+	 * @param personne
+	 */
+	private Personne() {
 	}
 
-	private String nom = "dupond";
+	public static Personne getInstance() {
+		if (instance == null) {
+			instance = new Personne();
+		}
+		;
 
-	public Personne() {
-
+		return instance;
 	}
 
 	/*
@@ -19,7 +26,8 @@ public class Personne {
 	 */
 	@Override
 	public String toString() {
-		return "Personne [nom=" + nom + "]";
+		return "Personne [getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
 	}
 
 }
