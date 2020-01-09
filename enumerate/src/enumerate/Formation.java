@@ -35,4 +35,8 @@ public enum Formation {
 	private Formation() {
 	}
 
+	public String toString() {
+		return "nom:" + name() + "Lieu: " + lieu + " prix:" + prix + "$";
+	}
+
 }
