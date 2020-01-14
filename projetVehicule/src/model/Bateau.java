@@ -33,4 +33,9 @@ public class Bateau extends Vehicule {
 	public String toString() {
 		return "Bateau [taille=" + taille + ", toString()=" + super.toString() + "]";
 	}
+
+	public String demarrer() {
+		return "bateau des marées";
+
+	}
 }

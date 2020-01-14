@@ -23,4 +23,9 @@ public class Voiture extends Vehicule {
 		return gps;
 	}
 
+	public String demarrer() {
+		return "voitures des marées";
+
+	}
+
 }

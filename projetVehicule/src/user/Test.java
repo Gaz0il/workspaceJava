@@ -15,7 +15,16 @@ public class Test {
 		// test2();
 		// test3();
 		// test4();
-		test6();
+		// test6();
+		test8();
+	}
+
+	static void test8() {
+		Vehicule[] tab = { new Velo("scott", 200), new Voiture("fiat", 2000),
+				new Bateau("ultramar", 2, Ebateau.grand) };
+		for (Vehicule i : tab) {
+			System.out.println(i.demarrer());
+		}
 	}
 
 	static void test6() {

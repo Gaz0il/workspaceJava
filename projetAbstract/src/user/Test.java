@@ -1,18 +1,18 @@
 package user;
 
-import module.CompteSimple;
+import modul.A;
 
-public class TestCompte {
+public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
 		test();
-
 	}
 
 	static void test() {
-		CompteSimple c1 = new CompteSimple("Hassin");
-		System.out.println(c1.toString());
+		A a = new A();
+		a.m1();
+		A.m2();
+
 	}
 }

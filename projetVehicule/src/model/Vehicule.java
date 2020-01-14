@@ -1,6 +1,6 @@
 package model;
 
-public class Vehicule {
+public abstract class Vehicule {
 	private String marque;
 	private int prix;
 
@@ -26,5 +26,7 @@ public class Vehicule {
 	public String toString() {
 		return "Vehicule [marque=" + marque + ", prix=" + prix + "]";
 	}
+
+	public abstract String demarrer();
 
 }

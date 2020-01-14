@@ -16,4 +16,9 @@ public class Velo extends Vehicule {
 		return "je roule à 2 roues";
 	}
 
+	public String demarrer() {
+		return "velo des marées";
+
+	}
+
 }
