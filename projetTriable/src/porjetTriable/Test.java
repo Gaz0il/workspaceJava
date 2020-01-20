@@ -7,14 +7,38 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		test2();
+
 	}
 
 	static void test2() {
-		Personne[] p = { new Personne("popo", "mop", 102), new Personne("mlkj", "qsdd", 93),
+		Article[] tab = { new Article("xx", 12), new Article("aa", 1249), new Article("tt", 125),
+				new Article("qq", 1255) };
+		for (Article t : tab)
+			System.out.println(t);
+		Arrays.sort(tab, new ComparePrix());
+		System.out.println("**************");
+		for (Article t : tab)
+			System.out.println(t);
+	}
+
+	static void test4() {
+		Article[] tab = { new Article("xx", 12), new Article("aa", 124), new Article("tt", 125),
+				new Article("qq", 1255) };
+		for (Article t : tab)
+			System.out.println(t);
+		Arrays.sort(tab, new CompareMarc());
+		System.out.println("**************");
+		for (Article t : tab)
+			System.out.println(t);
+	}
+
+	static void test3() {
+		Personne[] p = { new Personne("popo", "mop", 102), new Personne("mlkj", "qsdd", -93),
 				new Personne("mlk", "cde", -10) };
 		affiche(p);
 		Arrays.sort(p);
 		affiche(p);
+
 	}
 
 	static void test() {

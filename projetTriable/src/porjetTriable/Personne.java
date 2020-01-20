@@ -16,6 +16,13 @@ public class Personne implements Comparable<Personne> {
 		this.age = age;
 	}
 
+	/**
+	 * @return the age
+	 */
+	public int getAge() {
+		return age;
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -26,8 +33,15 @@ public class Personne implements Comparable<Personne> {
 		return "Personne [nom=" + nom + ", prenom=" + prenom + ", age=" + age + "]";
 	}
 
-	public int compareTo(Personne nom) {
-		return this.nom.compareTo(nom.nom);
+	public int compareTo(Personne o) {
+		Personne i = (Personne) o;
+		if (this.age < i.age)
+			return -1;
+
+		if (this.age > i.age)
+			return 1;
+
+		return 0;
 	}
 
 }
